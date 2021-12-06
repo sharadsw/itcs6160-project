@@ -9,4 +9,39 @@ This repo contains files for the Database Systems group project.
 
 ## Project Introduction
 
-We are given a database for a food delivery app called CampusEats. We have been assigned this project to upgrade the existing database by adding a rating system for restaurants and drivers. There are 10 tables in the existing database which is created by team Mavericks. The tables are as follows: delivery, driver, faculty, location, order, person, restaurant, staff, student, and vehicle. We will be adding 2 new tables, namely, driver_rating, restaurant_rating. The driver_rating table will have the following columns: id, courtesy_rating, ontime_rating, driver_id, order_id. The courtesy rating and ontime_rating will range from 1-5. The courtesy_rating will rate the driver's behavior and condition of the package. The ontime_rating will rate if the driver delivered the food in expected time. The restaurant_rating table will have the following columns: id, order_id, restaurant_id, food_rating. The food_rating will rate the quality and quantity of the food.
+CampusEats is a food delivery app build by team Maverick. We have extended the project by adding a rating system. The Objective of this project is to get the rating of all the restaurants and delivery drivers according to their performance. 
+
+We have added the following tables:
+
+* rating 
+* menu 
+* menu_order
+
+The rating table has the following columns, rating_id (PK), food_rating, delivery_rating, comments, picture_link, and order_id (FK).
+The menu table has the following columns, item_id (PK), item_name, item_desc, restaurant_id (FK).
+The menu_order table is an associative table which has the following columns, menu_order_id(PK), item_id, order_id and cooking_specification.
+
+## Operations
+
+The 3 advanced sql statements include: functions, stored procedures, indexes and views. We have also added indexes to two columns. 
+
+### Functions:
+* get_restaurant_id
+* get_person_id
+* get_item_id
+
+### Views:
+* delivery_driver_ratings
+* restaurant_rating_stats
+* restaurant_ordersVSreviews
+
+### Stored procedures:
+* add_restaurant
+* add_vehicle
+* customer_restaurant_rating
+* total_order_cost
+* total_order_count
+
+### Indexes:
+* menu_index
+* restaurant_index
