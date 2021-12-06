@@ -15,5 +15,3 @@ END //
 DELIMITER ;
 
 CALL add_restaurant('UNCC Campus', 'Wendys', '8am-5pm', 'http://www.wendys.com');
-
-sovi, Bojangles, chick fil ah, chipotle , papa johns
